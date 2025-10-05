@@ -1,0 +1,28 @@
+<!-- index.html -->
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Text To Speech</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <!-- Fixed logo in top left -->
+  <div class="fixed-logo">
+    <svg width="44" height="44" viewBox="0 0 60 60" fill="none">
+      <circle cx="30" cy="30" r="28" fill="#4e54c8" stroke="#8f94fb" stroke-width="4"/>
+      <path d="M22 40V20L40 30L22 40Z" fill="#fff"/>
+      <path d="M44 24C46 27 46 33 44 36" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <span class="logo-text">Text To Speech</span>
+  </div>
+  <div class="container">
+    <textarea id="txt" rows="5" cols="40" style="margin-top:0;">Hello — this is the Web Speech API speaking, Change the text to anything you like.</textarea><br>
+    <button id="speak">&#128264;</button>
+    <select id="voiceSelect" style="margin-bottom:30px;"></select>
+    <div id="voiceInfo" style="margin-bottom:20px; color:#8f94fb; font-size:1rem;"></div>
+  </div>
+  <script src="tts_say.js"></script>
+</body>
+</html>

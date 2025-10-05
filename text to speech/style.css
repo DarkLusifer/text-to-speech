@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #111;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: #181818;
+}
+body::-webkit-scrollbar-thumb {
+    background: #4e54c8;
+    border-radius: 8px;
+}
+body::-webkit-scrollbar-corner {
+    background: #181818;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+#txt {
+    display: block;
+    margin: 40px auto 32px auto;
+    width: 420px;
+    max-width: 90vw;
+    min-height: 120px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    border: none;
+    background: #222;
+    color: #f5f5f5;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+    resize: vertical;
+    outline: none;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
+#txt:focus {
+    background: #181818;
+    box-shadow: 0 6px 32px rgba(60, 120, 255, 0.18);
+}
+
+#speak {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0 24px 0; /* 24px space above and below the button */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 6px 32px rgba(90, 124, 255, 0.25), 0 2px 8px rgba(0,0,0,0.18);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+#speak:hover, #speak:focus {
+    background: linear-gradient(135deg, #8f94fb 0%, #4e54c8 100%);
+    transform: scale(1.08);
+    box-shadow: 0 10px 36px rgba(90, 124, 255, 0.32), 0 4px 16px rgba(0,0,0,0.22);
+}
+
+@media (max-width: 600px) {
+    #txt {
+        width: 98vw;
+        font-size: 1rem;
+        padding: 12px 8px;
+    }
+    #speak {
+        width: 56px;
+        height: 56px;
+        font-size: 1.3rem;
+    }
+}
+   /* Add this for logo positioning */
+      .fixed-logo {
+        position: absolute;
+        top: 28px;
+        left: 36px;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        user-select: none;
+      }
+      .fixed-logo svg {
+        display: block;
+      }
+      .fixed-logo .logo-text {
+        margin-left: 12px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #8f94fb;
+      }
+      @media (max-width: 600px) {
+        .fixed-logo {
+          top: 12px;
+          left: 8px;
+        }
+        .fixed-logo .logo-text {
+          font-size: 1rem;
+        }
+      }
+#voiceSelect {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1.5px solid #d1d9e6;
+    background: #222;
+    color: #f5f5f5;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    outline: none;
+    transition: border 0.2s;
+}
+#voiceSelect:focus {
+    border-color: #8f94fb;
+}
